@@ -1,6 +1,7 @@
 require "spec_helper"
 
 describe AuthorsController do
+    
     describe "GET #index" do
         
         it "assignes the authors object to @authors variable" do
