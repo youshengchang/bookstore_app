@@ -171,4 +171,24 @@ RSpec.describe AuthorsController, :type => :controller do
         end
     end
     
+    describe "DELETE #destroy" do
+        
+        let(:author) { Fabricate(:author)}
+        
+        it "delete author with given id" do
+            delete :destroy, id: author.id
+            expect(Author.count).to eq(0)
+        end
+        
+        it "sets the flash message" do
+            delete :destroy, id: author.id
+            expect(flash[:success]).to eq("Author has been deleted.")
+        end
+        
+        it "it redirect_to index action" do
+            delete :destroy, id: author.id
+            expect(response).to redirect_to authors_path
+        end
+    end
+    
 end
