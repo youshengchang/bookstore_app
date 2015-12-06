@@ -10,18 +10,6 @@ RSpec.describe AuthorsController, :type => :controller do
             expect(response).to have_http_status(:success)
         end
         
-     #   it "assignes the authors object to @authors variable" do
-     #       author1 = Fabricate(:author)
-     #       author2 = Fabricate(:author)
-     #       
-     #       get :index
-     #       expect(assigns(:authors)).to match_array([author1, author2])
-     #   end
-     #   it "renders the index template" do
-            
-     #       get :index
-     #       expect(response).to render_template :index
-     #   end
     end
     
     describe "GET #show" do
@@ -34,20 +22,7 @@ RSpec.describe AuthorsController, :type => :controller do
             expect(response).to have_http_status(:success)
         end
         
-    #    it "find the author with the given id and assign it to @author variable" do
-            #author = Fabricate(:author)
-            
-    #        get :show, id: author
-    #        expect(assigns(:author)).to eq(author)
-    #    end
-        
-    #    it "renders the show template" do
-            
-            #author = Fabricate(:author)
-     #       get :show, id: author
-     #       expect(response).to render_template :show
-            
-     #   end
+
     end
     
     describe "GET #new" do
@@ -57,18 +32,7 @@ RSpec.describe AuthorsController, :type => :controller do
             expect(response).to have_http_status(:success)
         end
         
-        #it "assigns a new author object to the @author variable" do
-            
-        #    get :new
-            
-        #    expect(assigns(:author)).to be_instance_of(Author)
-        #end
-        
-        #it "renders the new template" do
-            
-        #    get :new
-        #    expect(response).to render_template 'new'
-        #end
+ 
     end
     
     describe "POST #create" do
@@ -121,15 +85,7 @@ RSpec.describe AuthorsController, :type => :controller do
             expect(response).to have_http_status(:success)
         end
         
-       # it "find author with given id and assign it to @author variable" do
-    #            get :edit, id: author
-     #       expect(assigns(:author)).to eq(author)
-      #  end
-        
-      #  it "renders the edit template" do
-       #     get :edit, id: author
-        #    expect(response).to render_template :edit
-        #end
+
     end
     
     describe "PUT #update" do
