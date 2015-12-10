@@ -20,6 +20,7 @@ RSpec.feature "Creating Books" do
         fill_in "Description", with: "Learn Javascript with a quick and easy way"
         fill_in "Published at", with: "2014-01-01"
         select "Peachpit Press", from: "Publisher"
+        attach_file "Book cover", "app/assets/images/jesus-christ-greg-olson-light-world.jpg"
         check author1.full_name
         check author2.full_name
         
